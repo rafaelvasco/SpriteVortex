@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{136EC4AC-56D6-41BE-AA60-09346AD1A256}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpriteVortex</RootNamespace>
+    <AssemblyName>SpriteVortex</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>SpriteVortex_Ico2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.3.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vortex, Version=0.8.0.0, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="Vortex.Win32DirectX, Version=0.7.4039.37139, Culture=neutral, processorArchitecture=x86" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AboutSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutSplash.Designer.cs">
+      <DependentUpon>AboutSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\ColorPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\ColorPicker.Designer.cs">
+      <DependentUpon>ColorPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigIO.cs" />
+    <Compile Include="Exporter.cs" />
+    <Compile Include="AnimationStrip.cs" />
+    <Compile Include="Displays\AnimConfigDisplay.cs" />
+    <Compile Include="Displays\AnimPreviewDisplay.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Forms\ConfigurationWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigurationWindow.Designer.cs">
+      <DependentUpon>ConfigurationWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application.cs" />
+    <Compile Include="Events.cs" />
+    <Compile Include="FoldersHistoryManager.cs" />
+    <Compile Include="Forms\ExportFramesImagesOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExportFramesImagesOptions.Designer.cs">
+      <DependentUpon>ExportFramesImagesOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frame.cs" />
+    <Compile Include="Guard.cs" />
+    <Compile Include="Gui\Button.cs" />
+    <Compile Include="Gui\Control.cs" />
+    <Compile Include="Gui\DynamicPanel.cs" />
+    <Compile Include="Gui\GuiManager.cs" />
+    <Compile Include="Gui\Panel.cs" />
+    <Compile Include="Helpers\Animation\Interpolator.cs" />
+    <Compile Include="Helpers\Animation\InterpolatorCollection.cs" />
+    <Compile Include="Helpers\Animation\InterpolatorScales.cs" />
+    <Compile Include="Helpers\Animation\Pool.cs" />
+    <Compile Include="Helpers\Animation\Timer.cs" />
+    <Compile Include="Helpers\Animation\TimerCollection.cs" />
+    <Compile Include="Helpers\InputConfigurationHelper.cs" />
+    <Compile Include="Helpers\GifComponents\AnimatedGifEncoder.cs" />
+    <Compile Include="Helpers\GifComponents\Components\ApplicationExtension.cs" />
+    <Compile Include="Helpers\GifComponents\Components\ColourTable.cs" />
+    <Compile Include="Helpers\GifComponents\Components\DataBlock.cs" />
+    <Compile Include="Helpers\GifComponents\Components\GifComponent.cs" />
+    <Compile Include="Helpers\GifComponents\Components\GifFrame.cs" />
+    <Compile Include="Helpers\GifComponents\Components\GifHeader.cs" />
+    <Compile Include="Helpers\GifComponents\Components\GraphicControlExtension.cs" />
+    <Compile Include="Helpers\GifComponents\Components\ImageDescriptor.cs" />
+    <Compile Include="Helpers\GifComponents\Components\LogicalScreenDescriptor.cs" />
+    <Compile Include="Helpers\GifComponents\Components\NetscapeExtension.cs" />
+    <Compile Include="Helpers\GifComponents\Components\TableBasedImageData.cs" />
+    <Compile Include="Helpers\GifComponents\Enums\ColourTableStrategy.cs" />
+    <Compile Include="Helpers\GifComponents\Enums\DisposalMethod.cs" />
+    <Compile Include="Helpers\GifComponents\Enums\ErrorState.cs" />
+    <Compile Include="Helpers\GifComponents\Enums\GifDecoderState.cs" />
+    <Compile Include="Helpers\GifComponents\Enums\QuantizerType.cs" />
+    <Compile Include="Helpers\GifComponents\GifDecoder.cs" />
+    <Compile Include="Helpers\GifComponents\GifFrame.cs" />
+    <Compile Include="Helpers\GifComponents\Pelettes\Palette.cs" />
+    <Compile Include="Helpers\GifComponents\Pelettes\PaletteConverter.cs" />
+    <Compile Include="Helpers\GifComponents\Tools\ImageTools.cs" />
+    <Compile Include="Helpers\GifComponents\Tools\LzwEncoder.cs" />
+    <Compile Include="Helpers\GifComponents\Tools\NeuQuant.cs" />
+    <Compile Include="Helpers\GifComponents\Tools\PixelAnalysis.cs" />
+    <Compile Include="Helpers\GifComponents\Tools\Utils.cs" />
+    <Compile Include="Helpers\GifComponents\Types\GifComponentStatus.cs" />
+    <Compile Include="Helpers\GifComponents\Types\IndexedPixels.cs" />
+    <Compile Include="Helpers\GifComponents\Types\PackedFields.cs" />
+    <Compile Include="Helpers\GlobalizationHelper.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Helpers\Packing\ArevaloRectanglePacker.cs" />
+    <Compile Include="Helpers\Packing\SpriteSheetPacker.cs" />
+    <Compile Include="Helpers\Packing\RectanglePacker.cs" />
+    <Compile Include="Helpers\PathHelper.cs" />
+    <Compile Include="Helpers\XMLWriter.cs" />
+    <Compile Include="Custom Controls\InputControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\InputControl2.Designer.cs">
+      <DependentUpon>InputControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainDisplayStateHandler.cs" />
+    <Compile Include="Messager.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="SpriteSheetAndTextureFuncs.cs" />
+    <Compile Include="Input.cs" />
+    <Compile Include="Displays\MainDisplay.cs" />
+    <Compile Include="Forms\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MathHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AboutSplash.resx">
+      <DependentUpon>AboutSplash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\ColorPicker.resx">
+      <DependentUpon>ColorPicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigurationWindow.resx">
+      <DependentUpon>ConfigurationWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\InputControl2.resx">
+      <DependentUpon>InputControl2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportFramesImagesOptions.resx">
+      <DependentUpon>ExportFramesImagesOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Core\RenderDisplay.cs" />
+    <Compile Include="Core\RenderDisplayManager.cs" />
+    <Compile Include="ResourcesManager.cs" />
+    <Compile Include="Animation.cs" />
+    <Compile Include="SpriteSheet.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1283363742_color_swatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play All.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spritevortexlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\FONTS\segoe_ui_15_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\colorpicker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\guiPanel2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\guiPanel3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\gui_button_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\guipanel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\click1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\click2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\click3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\gui_button_overlay.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\gui_button_pressed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\movehor1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\movehor2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\movehor3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\movehor4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\movevert1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\movevert2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\movevert3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\movevert4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\pick1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\pick2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GFX\pick3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\exportXML.png" />
+    <None Include="Resources\importXML.png" />
+    <None Include="Resources\grid.png" />
+    <Content Include="Lib\ComponentFactory.Krypton.Toolkit.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Lib\Vortex.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Lib\Vortex.Win32DirectX.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SpriteVortex_Ico2.ico" />
+    <None Include="Resources\icon_export_spsheetmap.png" />
+    <None Include="Resources\pickTransparentColor.png" />
+    <None Include="Resources\AddContainer.png" />
+    <None Include="Resources\RemoveContainers.png" />
+    <None Include="Resources\eraseContainers.png" />
+    <None Include="Resources\spritevortexSplash.png" />
+    <None Include="Resources\icon_export_animation_gif.png" />
+    <None Include="Helpers\GifComponents\ColourTables\2colours.act" />
+    <None Include="Helpers\GifComponents\ColourTables\33colours.act" />
+    <None Include="Helpers\GifComponents\ColourTables\C64.act" />
+    <None Include="Helpers\GifComponents\ColourTables\cga.act" />
+    <None Include="Helpers\GifComponents\ColourTables\gameboy.act" />
+    <None Include="Helpers\GifComponents\ColourTables\grayscale.act" />
+    <None Include="Helpers\GifComponents\ColourTables\macintosh.act" />
+    <None Include="Helpers\GifComponents\ColourTables\test.act" />
+    <None Include="Helpers\GifComponents\ColourTables\Uglymix.act" />
+    <None Include="Helpers\GifComponents\ColourTables\uniform.act" />
+    <None Include="Helpers\GifComponents\ColourTables\web216.act" />
+    <None Include="Helpers\GifComponents\ColourTables\windows.act" />
+    <None Include="Resources\icon_export_animation.png" />
+    <None Include="Resources\icon_export_spsheet_separate.png" />
+    <None Include="Resources\icon_export_spsheet.png" />
+    <None Include="Resources\icon_add_animation.png" />
+    <None Include="Resources\icon_import_spsheet_separate.png" />
+    <None Include="Resources\icon_import_spsheet.png" />
+    <None Include="Data\FONTS\segoe_ui_15.fnt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Gear.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
