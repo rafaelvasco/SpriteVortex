@@ -1,5 +1,5 @@
 **Sprite Vortex**
-(Ancient project, runs and works but it's not being developed anymore, expect bugs.)
+Obs: Unmaintained :) Kept here in hope of being of value for others and of course for myself :)
 
 ---
 
